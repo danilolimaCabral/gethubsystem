@@ -13,13 +13,28 @@ export default function Home() {
     <div className="flex flex-col gap-0">
       {/* Hero Section */}
       <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-background pt-16 md:pt-0">
-        {/* Background Image with Overlay */}
+        {/* Background Video with Overlay */}
         <div className="absolute inset-0 z-0">
-          <img 
-            src="/images/hero-bg.jpg" 
-            alt="Background Tech" 
-            className="w-full h-full object-cover opacity-40"
-          />
+          {/* Desktop Video */}
+          <video 
+            autoPlay 
+            loop 
+            muted 
+            playsInline
+            className="hidden md:block w-full h-full object-cover opacity-30"
+          >
+            <source src="/videos/global-trade-3d.mp4" type="video/mp4" />
+          </video>
+          {/* Mobile Video */}
+          <video 
+            autoPlay 
+            loop 
+            muted 
+            playsInline
+            className="md:hidden w-full h-full object-cover opacity-30"
+          >
+            <source src="/videos/global-trade-3d-mobile.mp4" type="video/mp4" />
+          </video>
           <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/50 to-background"></div>
           <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-10"></div>
         </div>
