@@ -130,7 +130,34 @@ export default function Consultoria() {
               </div>
             </div>
             
-            <div className="bg-card border border-border rounded-2xl p-8 shadow-xl">
+<div className="bg-card border border-border rounded-2xl p-8 shadow-xl relative overflow-visible">
+              {/* Robot Consultant - Positioned outside the card */}
+              <div className="absolute -top-20 -right-16 z-10 animate-in fade-in slide-in-from-right-8 duration-1000 delay-300 hidden lg:block">
+                <div className="relative">
+                  {/* Glow effect */}
+                  <div className="absolute -inset-4 bg-primary/30 blur-2xl rounded-full animate-pulse"></div>
+                  
+                  {/* Robot */}
+                  <img 
+                    src="/images/robot-consultant.png" 
+                    alt="Robô Consultor" 
+                    className="relative w-40 h-40 object-contain drop-shadow-[0_0_20px_rgba(10,92,255,0.7)] animate-bounce-slow"
+                  />
+                  
+                  {/* Speech bubble with rotating tips */}
+                  <div className="absolute -left-56 top-12 w-52 bg-background border-2 border-primary/60 rounded-2xl p-4 shadow-2xl shadow-primary/20 animate-in fade-in slide-in-from-right-4 duration-700 delay-800">
+                    <div className="flex items-center gap-2 mb-2">
+                      <div className="w-2 h-2 rounded-full bg-primary animate-pulse"></div>
+                      <div className="text-xs font-bold text-primary uppercase tracking-wide">Dica do Consultor</div>
+                    </div>
+                    <div className="text-sm text-foreground leading-relaxed font-medium">
+                      💡 Planeje com 60 dias de antecedência para garantir os melhores preços!
+                    </div>
+                    {/* Arrow pointing to robot */}
+                    <div className="absolute -right-3 top-8 w-0 h-0 border-t-[12px] border-t-transparent border-b-[12px] border-b-transparent border-l-[12px] border-l-primary/60"></div>
+                  </div>
+                </div>
+              </div>
               <h3 className="text-xl font-bold mb-6">O que entregamos:</h3>
               <ul className="space-y-4">
                 {[
