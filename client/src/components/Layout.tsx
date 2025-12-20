@@ -24,12 +24,12 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     <div className="min-h-screen flex flex-col bg-background text-foreground font-sans selection:bg-primary selection:text-primary-foreground">
       {/* Header */}
       <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container flex h-16 items-center justify-between">
+        <div className="container flex h-20 md:h-24 items-center justify-between">
           <Link href="/">
             <img 
-              src="/images/logo-transparent.png" 
+              src="/images/logo-final.png" 
               alt="GetHubSystem" 
-              className="h-14 md:h-16 object-contain hover:opacity-90 transition-opacity cursor-pointer"
+              className="h-16 md:h-20 object-contain hover:opacity-90 transition-opacity cursor-pointer"
               style={{ filter: 'drop-shadow(0 0 20px rgba(10, 92, 255, 0.3))' }}
             />
           </Link>
