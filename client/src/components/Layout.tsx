@@ -26,7 +26,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container flex h-16 items-center justify-between">
           <Link href="/">
-            <a className="flex items-center gap-2 font-bold text-xl tracking-tight hover:opacity-90 transition-opacity">
+            <div className="flex items-center gap-2 font-bold text-xl tracking-tight hover:opacity-90 transition-opacity cursor-pointer">
               <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center text-primary-foreground">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -44,20 +44,20 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 </svg>
               </div>
               <span>GetHubSystem</span>
-            </a>
+            </div>
           </Link>
 
           {/* Desktop Nav */}
           <nav className="hidden md:flex items-center gap-6">
             {navItems.map((item) => (
               <Link key={item.path} href={item.path}>
-                <a
-                  className={`text-sm font-medium transition-colors hover:text-primary ${
+                <span
+                  className={`text-sm font-medium transition-colors hover:text-primary cursor-pointer ${
                     isActive(item.path) ? "text-primary" : "text-muted-foreground"
                   }`}
                 >
                   {item.name}
-                </a>
+                </span>
               </Link>
             ))}
             <Button asChild size="sm" className="ml-4 font-semibold shadow-lg shadow-primary/20">
@@ -77,7 +77,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <SheetContent side="right" className="w-[300px] sm:w-[400px] border-l border-border/50 bg-background/95 backdrop-blur-xl">
               <div className="flex flex-col gap-8 mt-8">
                 <Link href="/">
-                  <a className="flex items-center gap-2 font-bold text-xl" onClick={() => setIsMobileMenuOpen(false)}>
+                  <div className="flex items-center gap-2 font-bold text-xl cursor-pointer" onClick={() => setIsMobileMenuOpen(false)}>
                     <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center text-primary-foreground">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -93,19 +93,19 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                       </svg>
                     </div>
                     <span>GetHubSystem</span>
-                  </a>
+                  </div>
                 </Link>
                 <nav className="flex flex-col gap-4">
                   {navItems.map((item) => (
                     <Link key={item.path} href={item.path}>
-                      <a
-                        className={`text-lg font-medium transition-colors hover:text-primary ${
+                      <span
+                        className={`text-lg font-medium transition-colors hover:text-primary cursor-pointer ${
                           isActive(item.path) ? "text-primary" : "text-muted-foreground"
                         }`}
                         onClick={() => setIsMobileMenuOpen(false)}
                       >
                         {item.name}
-                      </a>
+                      </span>
                     </Link>
                   ))}
                   <Button asChild className="mt-4 w-full shadow-lg shadow-primary/20">
@@ -154,18 +154,18 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           <div className="flex flex-col gap-4">
             <h3 className="font-semibold text-foreground">Soluções</h3>
             <nav className="flex flex-col gap-2 text-sm text-muted-foreground">
-              <Link href="/sistemas"><a className="hover:text-primary transition-colors">Sistemas Próprios</a></Link>
-              <Link href="/site-48h"><a className="hover:text-primary transition-colors">Site em 48h (IA)</a></Link>
-              <Link href="/consultoria"><a className="hover:text-primary transition-colors">Consultoria de Importação</a></Link>
+              <Link href="/sistemas"><span className="hover:text-primary transition-colors cursor-pointer">Sistemas Próprios</span></Link>
+              <Link href="/site-48h"><span className="hover:text-primary transition-colors cursor-pointer">Site em 48h (IA)</span></Link>
+              <Link href="/consultoria"><span className="hover:text-primary transition-colors cursor-pointer">Consultoria de Importação</span></Link>
             </nav>
           </div>
 
           <div className="flex flex-col gap-4">
             <h3 className="font-semibold text-foreground">Empresa</h3>
             <nav className="flex flex-col gap-2 text-sm text-muted-foreground">
-              <Link href="/sobre"><a className="hover:text-primary transition-colors">Sobre Nós</a></Link>
-              <Link href="/portfolio"><a className="hover:text-primary transition-colors">Portfólio</a></Link>
-              <Link href="/contato"><a className="hover:text-primary transition-colors">Fale Conosco</a></Link>
+              <Link href="/sobre"><span className="hover:text-primary transition-colors cursor-pointer">Sobre Nós</span></Link>
+              <Link href="/portfolio"><span className="hover:text-primary transition-colors cursor-pointer">Portfólio</span></Link>
+              <Link href="/contato"><span className="hover:text-primary transition-colors cursor-pointer">Fale Conosco</span></Link>
             </nav>
           </div>
 
