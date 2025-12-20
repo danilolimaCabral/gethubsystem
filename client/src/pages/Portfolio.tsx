@@ -8,21 +8,21 @@ export default function Portfolio() {
       url: "contextocontabil.com.br",
       category: "Site Institucional",
       description: "Site institucional moderno para escritório de contabilidade, focado em captação de leads e apresentação de serviços consultivos.",
-      image: "/images/portfolio-placeholder-1.jpg" // Placeholder path
+      image: "/images/portfolio-contexto-contabil.webp"
     },
     {
       name: "Panificadora Texeira",
       url: "panificadoratexeira.com.br",
       category: "E-commerce Local",
       description: "Plataforma de encomendas online para panificadora tradicional, integrando pedidos diretamente com a produção.",
-      image: "/images/portfolio-placeholder-2.jpg" // Placeholder path
+      image: "/images/portfolio-panificadora.webp"
     },
     {
       name: "Vitrine Global",
       url: "vitrine-global.com",
       category: "Marketplace",
       description: "Hub de produtos importados com integração de estoque e cálculo de frete internacional em tempo real.",
-      image: "/images/portfolio-placeholder-3.jpg" // Placeholder path
+      image: "/images/portfolio-vitrine-global.webp"
     },
     // Adicione mais projetos conforme necessário
   ];
@@ -43,9 +43,11 @@ export default function Portfolio() {
           {projects.map((project, index) => (
             <div key={index} className="group flex flex-col bg-card border border-border rounded-xl overflow-hidden hover:shadow-xl hover:shadow-primary/5 transition-all duration-300 hover:-translate-y-1">
               <div className="aspect-video bg-muted relative overflow-hidden">
-                <div className="absolute inset-0 flex items-center justify-center bg-muted text-muted-foreground">
-                  <Globe className="h-12 w-12 opacity-20" />
-                </div>
+                <img 
+                  src={project.image} 
+                  alt={project.name}
+                  className="w-full h-full object-cover object-top"
+                />
                 {/* Overlay on hover */}
                 <div className="absolute inset-0 bg-primary/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                   <Button variant="secondary" asChild>
