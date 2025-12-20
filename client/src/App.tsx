@@ -12,8 +12,8 @@ import Portfolio from "./pages/Portfolio";
 import Site48h from "./pages/Site48h";
 import Sistemas from "./pages/Sistemas";
 import Sobre from "./pages/Sobre";
-
 function Router() {
+  // make sure to consider if you need authentication for certain routes
   return (
     <Layout>
       <Switch>
