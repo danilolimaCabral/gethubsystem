@@ -27,10 +27,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <div className="container flex h-20 md:h-24 items-center justify-between">
           <Link href="/">
             <img 
-              src="/images/logo-final.png" 
+              src="/images/logo.svg" 
               alt="GetHubSystem" 
               className="h-16 md:h-20 object-contain hover:opacity-90 transition-opacity cursor-pointer"
-              style={{ filter: 'drop-shadow(0 0 20px rgba(10, 92, 255, 0.3))' }}
             />
           </Link>
 

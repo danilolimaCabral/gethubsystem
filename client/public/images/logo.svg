@@ -1,0 +1,66 @@
+<svg width="600" height="120" viewBox="0 0 600 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Hexagonal Shield with Circuit Pattern -->
+  <g filter="url(#glow)">
+    <!-- Shield Outline -->
+    <path d="M60 10 L90 25 L90 55 L60 70 L30 55 L30 25 Z" 
+          stroke="#0A5CFF" 
+          stroke-width="3" 
+          fill="none"
+          opacity="0.8"/>
+    
+    <!-- Inner Shield -->
+    <path d="M60 15 L85 28 L85 52 L60 65 L35 52 L35 28 Z" 
+          stroke="#0A5CFF" 
+          stroke-width="2" 
+          fill="rgba(10, 92, 255, 0.1)"/>
+    
+    <!-- Circuit Lines -->
+    <line x1="45" y1="30" x2="60" y2="40" stroke="#0A5CFF" stroke-width="1.5" opacity="0.7"/>
+    <line x1="60" y1="40" x2="75" y2="30" stroke="#0A5CFF" stroke-width="1.5" opacity="0.7"/>
+    <line x1="60" y1="40" x2="60" y2="55" stroke="#0A5CFF" stroke-width="1.5" opacity="0.7"/>
+    <line x1="45" y1="50" x2="60" y2="55" stroke="#0A5CFF" stroke-width="1.5" opacity="0.7"/>
+    <line x1="75" y1="50" x2="60" y2="55" stroke="#0A5CFF" stroke-width="1.5" opacity="0.7"/>
+    
+    <!-- Circuit Nodes -->
+    <circle cx="45" cy="30" r="2" fill="#0A5CFF"/>
+    <circle cx="75" cy="30" r="2" fill="#0A5CFF"/>
+    <circle cx="60" cy="40" r="2.5" fill="#0A5CFF"/>
+    <circle cx="45" cy="50" r="2" fill="#0A5CFF"/>
+    <circle cx="75" cy="50" r="2" fill="#0A5CFF"/>
+    <circle cx="60" cy="55" r="2.5" fill="#0A5CFF"/>
+    
+    <!-- Central Glow -->
+    <circle cx="60" cy="40" r="8" fill="#0A5CFF" opacity="0.2"/>
+  </g>
+  
+  <!-- Text: GetHubSystem -->
+  <g filter="url(#textGlow)">
+    <text x="120" y="65" 
+          font-family="Inter, system-ui, -apple-system, sans-serif" 
+          font-size="48" 
+          font-weight="700" 
+          fill="white"
+          letter-spacing="-1">
+      GetHubSystem
+    </text>
+  </g>
+  
+  <!-- Glow Effects -->
+  <defs>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <filter id="textGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+</svg>
