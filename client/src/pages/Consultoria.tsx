@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowRight, BarChart3, CheckCircle2, Container, FileText, Globe2, ShieldCheck } from "lucide-react";
-import GlobalTradeAnimation from "@/components/GlobalTradeAnimation";
+
 
 export default function Consultoria() {
   return (
@@ -28,10 +28,16 @@ export default function Consultoria() {
               </Button>
             </div>
           </div>
-<div className="relative rounded-2xl overflow-hidden border border-border/50 shadow-2xl bg-background/50 backdrop-blur-sm">
-            <div className="w-full aspect-[4/3] flex items-center justify-center">
-              <GlobalTradeAnimation />
-            </div>
+<div className="relative rounded-2xl overflow-hidden border border-border/50 shadow-2xl bg-black">
+            <video 
+              autoPlay 
+              loop 
+              muted 
+              playsInline
+              className="w-full aspect-[4/3] object-cover"
+            >
+              <source src="/videos/global-trade-3d.mp4" type="video/mp4" />
+            </video>
             <div className="absolute bottom-6 left-6 right-6">
               <div className="bg-background/90 backdrop-blur-md p-4 rounded-lg border border-primary/30 shadow-xl">
                 <p className="font-mono text-xs text-primary mb-1 uppercase tracking-wider">Resultados Reais</p>
