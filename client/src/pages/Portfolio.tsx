@@ -20,11 +20,17 @@ export default function Portfolio() {
     {
       name: "Vitrine Global",
       url: "vitrine-global.com",
-      category: "Marketplace",
-      description: "Hub de produtos importados com integração de estoque e cálculo de frete internacional em tempo real.",
+      category: "Gestão de Importação",
+      description: "Plataforma completa de gestão de importação 4.0 com calculadora de custos, rastreamento e suporte 24h.",
       image: "/images/portfolio-vitrine-global.webp"
     },
-    // Adicione mais projetos conforme necessário
+    {
+      name: "Dispara Linea Trading",
+      url: "disparalineatrading.com",
+      category: "E-commerce Internacional",
+      description: "Marketplace premium de tecnologia, pneus e perfumes com vendas B2B para Europa e Brasil.",
+      image: "/images/portfolio-disparalinea.webp"
+    }
   ];
 
   return (

@@ -1,4 +1,5 @@
 import { Link, useLocation } from "wouter";
+import RobotChatbot from "./RobotChatbot";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu, X } from "lucide-react";
@@ -26,25 +27,11 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container flex h-16 items-center justify-between">
           <Link href="/">
-            <div className="flex items-center gap-2 font-bold text-xl tracking-tight hover:opacity-90 transition-opacity cursor-pointer">
-              <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center text-primary-foreground">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="w-5 h-5"
-                >
-                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-                  <path d="M12 8v4" />
-                  <path d="M12 16h.01" />
-                </svg>
-              </div>
-              <span>GetHubSystem</span>
-            </div>
+            <img 
+              src="/images/logo-complete.png" 
+              alt="GetHubSystem" 
+              className="h-8 object-contain hover:opacity-90 transition-opacity cursor-pointer"
+            />
           </Link>
 
           {/* Desktop Nav */}
@@ -194,17 +181,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
       {/* Mouse Follower Robot */}
       <MouseFollowerRobot />
-
-      {/* Floating WhatsApp Button */}
-      <a
-        href="https://wa.me/5511999999999"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="fixed bottom-6 right-6 z-50 w-14 h-14 bg-[#25D366] hover:bg-[#20bd5a] text-white rounded-full shadow-lg shadow-green-900/20 flex items-center justify-center transition-all hover:scale-110 animate-in fade-in zoom-in duration-300"
-        aria-label="Falar no WhatsApp"
-      >
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-message-circle"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
-      </a>
+      
+      {/* Robot Chatbot */}
+      <RobotChatbot />
     </div>
   );
 }
