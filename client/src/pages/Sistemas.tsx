@@ -52,11 +52,12 @@ export default function Sistemas() {
                 </a>
               </Button>
             </div>
-            <div className="order-1 md:order-2 bg-card border border-border rounded-2xl p-8 shadow-2xl shadow-primary/5">
-              {/* Placeholder for System UI */}
-              <div className="aspect-video bg-muted/50 rounded-lg flex items-center justify-center border border-border/50">
-                <Zap className="h-16 w-16 text-muted-foreground/20" />
-              </div>
+            <div className="order-1 md:order-2 bg-card border border-border rounded-2xl p-4 shadow-2xl shadow-primary/10">
+              <img 
+                src="/images/cellsync-mockup.jpg" 
+                alt="CellSync Dashboard Interface" 
+                className="w-full h-auto rounded-lg"
+              />
             </div>
           </div>
 
@@ -90,11 +91,12 @@ export default function Sistemas() {
                 </a>
               </Button>
             </div>
-            <div className="order-2 md:order-1 bg-card border border-border rounded-2xl p-8 shadow-2xl shadow-primary/5">
-              {/* Placeholder for System UI */}
-              <div className="aspect-video bg-muted/50 rounded-lg flex items-center justify-center border border-border/50">
-                <Globe className="h-16 w-16 text-muted-foreground/20" />
-              </div>
+            <div className="order-2 md:order-1 bg-card border border-border rounded-2xl p-4 shadow-2xl shadow-primary/10">
+              <img 
+                src="/images/markethub-mockup.jpg" 
+                alt="MarketHub Dashboard Interface" 
+                className="w-full h-auto rounded-lg"
+              />
             </div>
           </div>
 
@@ -128,11 +130,12 @@ export default function Sistemas() {
                 </a>
               </Button>
             </div>
-            <div className="order-1 md:order-2 bg-card border border-border rounded-2xl p-8 shadow-2xl shadow-primary/5">
-              {/* Placeholder for System UI */}
-              <div className="aspect-video bg-muted/50 rounded-lg flex items-center justify-center border border-border/50">
-                <Rocket className="h-16 w-16 text-muted-foreground/20" />
-              </div>
+            <div className="order-1 md:order-2 bg-card border border-border rounded-2xl p-4 shadow-2xl shadow-primary/10">
+              <img 
+                src="/images/easysales-mockup.jpg" 
+                alt="EasySales Dashboard Interface" 
+                className="w-full h-auto rounded-lg"
+              />
             </div>
           </div>
 

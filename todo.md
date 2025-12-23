@@ -41,3 +41,11 @@
 ## Concluído Recentemente
 - [x] Capturar screenshot do site www.menuturistic.com.br
 - [x] Adicionar MenuTuristic ao portfólio
+
+## Em Andamento
+
+## Concluído Recentemente
+- [x] Gerar mockup visual do CellSync
+- [x] Gerar mockup visual do MarketHub
+- [x] Gerar mockup visual do EasySales
+- [x] Integrar mockups na página de Sistemas
