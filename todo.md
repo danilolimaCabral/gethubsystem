@@ -49,3 +49,8 @@
 - [x] Gerar mockup visual do MarketHub
 - [x] Gerar mockup visual do EasySales
 - [x] Integrar mockups na página de Sistemas
+
+## Em Andamento
+
+## Concluído Recentemente
+- [x] Criar versão isolada do ícone (apenas escudo hexagonal) com fundo transparente
