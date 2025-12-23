@@ -19,3 +19,9 @@
 - [ ] Integrar formulários com backend para salvar leads
 - [ ] Adicionar depoimentos de clientes reais
 - [ ] Implementar loading skeletons nas páginas
+
+## Em Andamento
+
+## Concluído Recentemente
+- [x] Remover botões WhatsApp do header
+- [x] Centralizar captura de leads apenas no robô assistente

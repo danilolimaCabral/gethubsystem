@@ -47,11 +47,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 </span>
               </Link>
             ))}
-            <Button asChild size="sm" className="ml-4 font-semibold shadow-lg shadow-primary/20">
-              <a href="https://wa.me/5562992581100" target="_blank" rel="noopener noreferrer">
-                Fale Conosco
-              </a>
-            </Button>
           </nav>
 
           {/* Mobile Nav */}
@@ -95,11 +90,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                       </span>
                     </Link>
                   ))}
-                  <Button asChild className="mt-4 w-full shadow-lg shadow-primary/20">
-                    <a href="https://wa.me/5562992581100" target="_blank" rel="noopener noreferrer">
-                      Fale Conosco
-                    </a>
-                  </Button>
                 </nav>
               </div>
             </SheetContent>
