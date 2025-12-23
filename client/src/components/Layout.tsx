@@ -16,6 +16,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     { name: "Consultoria", path: "/consultoria" },
     { name: "Portfólio", path: "/portfolio" },
     { name: "Sobre", path: "/sobre" },
+    { name: "FAQ", path: "/faq" },
   ];
 
   const isActive = (path: string) => location === path;
@@ -151,6 +152,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <nav className="flex flex-col gap-2 text-sm text-muted-foreground">
               <Link href="/sobre"><span className="hover:text-primary transition-colors cursor-pointer">Sobre Nós</span></Link>
               <Link href="/portfolio"><span className="hover:text-primary transition-colors cursor-pointer">Portfólio</span></Link>
+              <Link href="/faq"><span className="hover:text-primary transition-colors cursor-pointer">Perguntas Frequentes</span></Link>
               <Link href="/contato"><span className="hover:text-primary transition-colors cursor-pointer">Fale Conosco</span></Link>
             </nav>
           </div>

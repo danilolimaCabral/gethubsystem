@@ -8,6 +8,7 @@ import Layout from "./components/Layout";
 import Consultoria from "./pages/Consultoria";
 import Contato from "./pages/Contato";
 import Home from "./pages/Home";
+import FAQ from "./pages/FAQ";
 import Portfolio from "./pages/Portfolio";
 import Site48h from "./pages/Site48h";
 import Sistemas from "./pages/Sistemas";
@@ -24,6 +25,7 @@ function Router() {
         <Route path="/portfolio" component={Portfolio} />
         <Route path="/sobre" component={Sobre} />
         <Route path="/contato" component={Contato} />
+        <Route path="/faq" component={FAQ} />
         <Route path="/404" component={NotFound} />
         <Route component={NotFound} />
       </Switch>
