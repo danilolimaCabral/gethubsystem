@@ -25,4 +25,22 @@ export const users = mysqlTable("users", {
 export type User = typeof users.$inferSelect;
 export type InsertUser = typeof users.$inferInsert;
 
-// TODO: Add your tables here
+/**
+ * Leads capturados pelo robô assistente
+ */
+export const leads = mysqlTable("leads", {
+  id: int("id").autoincrement().primaryKey(),
+  name: varchar("name", { length: 255 }),
+  email: varchar("email", { length: 320 }),
+  phone: varchar("phone", { length: 20 }),
+  service: varchar("service", { length: 100 }), // Sistemas, Site 48h, Consultoria, etc
+  message: text("message"), // Mensagem inicial do lead
+  status: mysqlEnum("status", ["novo", "em_atendimento", "convertido", "perdido"]).default("novo").notNull(),
+  notes: text("notes"), // Notas internas do admin
+  source: varchar("source", { length: 50 }).default("robo_chat"), // Origem do lead
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+  updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
+});
+
+export type Lead = typeof leads.$inferSelect;
+export type InsertLead = typeof leads.$inferInsert;

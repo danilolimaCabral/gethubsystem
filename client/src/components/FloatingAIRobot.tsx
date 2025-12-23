@@ -2,6 +2,9 @@ import { useState } from "react";
 import { X, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { trpc } from "@/lib/trpc";
+import { toast } from "sonner";
 
 export default function FloatingAIRobot() {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,6 +15,26 @@ export default function FloatingAIRobot() {
     }
   ]);
   const [inputValue, setInputValue] = useState("");
+  const [showLeadForm, setShowLeadForm] = useState(false);
+  const [leadData, setLeadData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    service: "",
+  });
+
+  const createLeadMutation = trpc.leads.create.useMutation({
+    onSuccess: () => {
+      toast.success("Obrigado! Entraremos em contato em breve.");
+      setShowLeadForm(false);
+      setMessages([...messages, 
+        { type: "bot", text: "✅ Dados recebidos com sucesso! Nossa equipe entrará em contato em breve. Enquanto isso, fique à vontade para explorar nossos serviços!" }
+      ]);
+    },
+    onError: () => {
+      toast.error("Erro ao enviar dados. Tente novamente.");
+    },
+  });
 
   const quickOptions = [
     { label: "🖥️ Sistemas Próprios", action: "sistemas", response: "Temos +5 sistemas desenvolvidos internamente: CellSync (gestão de celulares), MarketHub (marketplace), EasySales (CRM de vendas) e mais! Posso te redirecionar para conhecer todos em detalhes." },
@@ -54,10 +77,27 @@ export default function FloatingAIRobot() {
 
     setMessages([...messages, 
       { type: "user", text: inputValue },
-      { type: "bot", text: "Obrigado pela sua mensagem! Um de nossos especialistas entrará em contato em breve. Enquanto isso, você pode explorar nossas soluções usando os botões abaixo ou falar diretamente no WhatsApp! 📱" }
+      { type: "bot", text: "Obrigado pela sua mensagem! Para que possamos te atender melhor, por favor preencha seus dados de contato abaixo. 📝" }
     ]);
     
+    setLeadData({ ...leadData, service: "Contato Geral" });
+    setShowLeadForm(true);
     setInputValue("");
+  };
+
+  const handleSubmitLead = () => {
+    if (!leadData.name || !leadData.email || !leadData.phone) {
+      toast.error("Por favor, preencha todos os campos.");
+      return;
+    }
+
+    createLeadMutation.mutate({
+      name: leadData.name,
+      email: leadData.email,
+      phone: leadData.phone,
+      service: leadData.service,
+      message: inputValue || "Contato via chat do robô",
+    });
   };
 
   return (
@@ -194,19 +234,73 @@ export default function FloatingAIRobot() {
             </Button>
           </div>
 
-          {/* Input */}
-          <div className="p-4 border-t border-border bg-background flex gap-2">
-            <Input
-              placeholder="Digite sua mensagem..."
-              value={inputValue}
-              onChange={(e) => setInputValue(e.target.value)}
-              onKeyPress={(e) => e.key === "Enter" && handleSendMessage()}
-              className="flex-1"
-            />
-            <Button onClick={handleSendMessage} size="icon" className="shrink-0">
-              <Send className="h-4 w-4" />
-            </Button>
-          </div>
+          {/* Lead Form or Input */}
+          {showLeadForm ? (
+            <div className="p-4 border-t border-border bg-background space-y-3">
+              <div>
+                <Label htmlFor="name" className="text-xs font-medium">Nome Completo *</Label>
+                <Input
+                  id="name"
+                  placeholder="Seu nome"
+                  value={leadData.name}
+                  onChange={(e) => setLeadData({ ...leadData, name: e.target.value })}
+                  className="mt-1"
+                />
+              </div>
+              <div>
+                <Label htmlFor="email" className="text-xs font-medium">E-mail *</Label>
+                <Input
+                  id="email"
+                  type="email"
+                  placeholder="seu@email.com"
+                  value={leadData.email}
+                  onChange={(e) => setLeadData({ ...leadData, email: e.target.value })}
+                  className="mt-1"
+                />
+              </div>
+              <div>
+                <Label htmlFor="phone" className="text-xs font-medium">Telefone/WhatsApp *</Label>
+                <Input
+                  id="phone"
+                  placeholder="(62) 99999-9999"
+                  value={leadData.phone}
+                  onChange={(e) => setLeadData({ ...leadData, phone: e.target.value })}
+                  className="mt-1"
+                />
+              </div>
+              <div className="flex gap-2">
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={() => setShowLeadForm(false)}
+                  className="flex-1"
+                >
+                  Cancelar
+                </Button>
+                <Button
+                  size="sm"
+                  onClick={handleSubmitLead}
+                  disabled={createLeadMutation.isPending}
+                  className="flex-1"
+                >
+                  {createLeadMutation.isPending ? "Enviando..." : "Enviar"}
+                </Button>
+              </div>
+            </div>
+          ) : (
+            <div className="p-4 border-t border-border bg-background flex gap-2">
+              <Input
+                placeholder="Digite sua mensagem..."
+                value={inputValue}
+                onChange={(e) => setInputValue(e.target.value)}
+                onKeyPress={(e) => e.key === "Enter" && handleSendMessage()}
+                className="flex-1"
+              />
+              <Button onClick={handleSendMessage} size="icon" className="shrink-0">
+                <Send className="h-4 w-4" />
+              </Button>
+            </div>
+          )}
         </div>
       )}
 

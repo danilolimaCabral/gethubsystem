@@ -25,3 +25,13 @@
 ## Concluído Recentemente
 - [x] Remover botões WhatsApp do header
 - [x] Centralizar captura de leads apenas no robô assistente
+
+## Em Andamento
+
+## Concluído Recentemente
+- [x] Implementar notificações por e-mail para danilo.rcbaral@gmail.com
+
+## Concluído Recentemente
+- [x] Criar schema do banco de dados para leads
+- [x] Atualizar robô para capturar e salvar leads no banco
+- [x] Criar painel administrativo de leads
