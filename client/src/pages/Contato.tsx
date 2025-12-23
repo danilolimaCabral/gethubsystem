@@ -35,7 +35,7 @@ export default function Contato() {
                   </div>
                   <div>
                     <h3 className="font-bold">WhatsApp / Telefone</h3>
-                    <p className="text-muted-foreground text-sm">(11) 99999-9999</p>
+                    <p className="text-muted-foreground text-sm">(62) 99258-1100 | (62) 9907-0393</p>
                   </div>
                 </CardContent>
               </Card>
@@ -47,7 +47,7 @@ export default function Contato() {
                   </div>
                   <div>
                     <h3 className="font-bold">E-mail</h3>
-                    <p className="text-muted-foreground text-sm">contato@gethubsystem.com.br</p>
+                    <p className="text-muted-foreground text-sm break-all">contextocontabilidadego@gmail.com</p>
                   </div>
                 </CardContent>
               </Card>
@@ -59,7 +59,7 @@ export default function Contato() {
                   </div>
                   <div>
                     <h3 className="font-bold">Localização</h3>
-                    <p className="text-muted-foreground text-sm">São Paulo, SP - Brasil</p>
+                    <p className="text-muted-foreground text-sm leading-relaxed">Av João Luiz de Almeida, 451<br />Setor Crimeia Oeste - Goiânia/GO</p>
                   </div>
                 </CardContent>
               </Card>
