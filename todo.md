@@ -35,3 +35,9 @@
 - [x] Criar schema do banco de dados para leads
 - [x] Atualizar robô para capturar e salvar leads no banco
 - [x] Criar painel administrativo de leads
+
+## Em Andamento
+
+## Concluído Recentemente
+- [x] Capturar screenshot do site www.menuturistic.com.br
+- [x] Adicionar MenuTuristic ao portfólio
