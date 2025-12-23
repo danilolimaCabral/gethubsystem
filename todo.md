@@ -54,3 +54,10 @@
 
 ## Concluído Recentemente
 - [x] Criar versão isolada do ícone (apenas escudo hexagonal) com fundo transparente
+
+## Em Andamento
+
+## Concluído Recentemente
+- [x] Gerar favicon.ico a partir do ícone hexagonal
+- [x] Configurar favicon no index.html
+- [x] Alterar botões "Ver detalhes" dos sistemas para abrirem formulário de teste

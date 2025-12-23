@@ -124,8 +124,12 @@ export default function Home() {
                 </ul>
               </CardContent>
               <CardFooter>
-                <Button className="w-full" variant="secondary" asChild>
-                  <Link href="/sistemas/cellsync">Ver detalhes</Link>
+                <Button 
+                  className="w-full" 
+                  variant="secondary"
+                  onClick={() => window.location.href = '/contato?sistema=cellsync'}
+                >
+                  Solicitar teste
                 </Button>
               </CardFooter>
             </Card>
@@ -147,8 +151,12 @@ export default function Home() {
                 </ul>
               </CardContent>
               <CardFooter>
-                <Button className="w-full" variant="secondary" asChild>
-                  <Link href="/sistemas/markethub">Ver detalhes</Link>
+                <Button 
+                  className="w-full" 
+                  variant="secondary"
+                  onClick={() => window.location.href = '/contato?sistema=markethub'}
+                >
+                  Solicitar teste
                 </Button>
               </CardFooter>
             </Card>
@@ -170,8 +178,12 @@ export default function Home() {
                 </ul>
               </CardContent>
               <CardFooter>
-                <Button className="w-full" variant="secondary" asChild>
-                  <Link href="/sistemas/easysales">Ver detalhes</Link>
+                <Button 
+                  className="w-full" 
+                  variant="secondary"
+                  onClick={() => window.location.href = '/contato?sistema=easysales'}
+                >
+                  Solicitar teste
                 </Button>
               </CardFooter>
             </Card>
