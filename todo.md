@@ -77,7 +77,9 @@
 - [x] Criar sistema de configuração para trocar banners facilmente
 - [x] Gerar banner de Natal com robô IA (até 31/12)
 - [x] Gerar banner de Ano Novo 2025 (a partir de 01/01)
-- [ ] Gerar vídeo do robô acenando para banner animado (opcional)
+- [x] Gerar vídeo completo de Natal com robô acenando + texto
+- [x] Gerar vídeo completo de Ano Novo com fogos + texto
+- [x] Atualizar configuração de banners para usar vídeos completos
 - [x] Gerar vídeo de fogos de artifício para banner de Ano Novo
 - [x] Implementar sistema de troca automática de banners por data
 - [x] Criar configuração de banners sazonais

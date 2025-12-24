@@ -21,7 +21,8 @@ interface SeasonalBanner extends BannerConfig {
 export const SEASONAL_BANNERS: SeasonalBanner[] = [
   {
     id: "christmas-2024",
-    imageUrl: "/images/banner-christmas-robot.png",
+    videoUrl: "/videos/christmas-robot-2024.mp4",
+    imageUrl: "/images/banner-christmas-robot.png", // Fallback image
     alt: "Feliz Natal - GetHubSystem com IA",
     startDate: "2024-12-01",
     endDate: "2024-12-31",
@@ -29,10 +30,10 @@ export const SEASONAL_BANNERS: SeasonalBanner[] = [
     expiryDays: 1, // Show again after 1 day if closed
   },
   {
-    id: "new-year-2025",
-    videoUrl: "/videos/fireworks-2025.mp4",
+    id: "new-year-2026",
+    videoUrl: "/videos/new-year-2026.mp4",
     imageUrl: "/images/banner-new-year-2025.png", // Fallback image
-    alt: "Feliz Ano Novo 2025 - GetHubSystem",
+    alt: "Feliz Ano Novo - Que venha 2026 com muita IA",
     startDate: "2025-01-01",
     endDate: "2025-01-15",
     delayMs: 1500,
