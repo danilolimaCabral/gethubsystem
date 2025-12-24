@@ -1,5 +1,7 @@
 import { useAuth } from "@/_core/hooks/useAuth";
 import { Button } from "@/components/ui/button";
+import BannerModal from "@/components/BannerModal";
+import { getActiveBanner } from "@/config/banners";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowRight, CheckCircle2, Code2, Globe, LayoutTemplate, Rocket, ShieldCheck, Zap } from "lucide-react";
 import { Link } from "wouter";
@@ -9,20 +11,14 @@ export default function Home() {
   // To implement login/logout functionality, simply call logout() or redirect to getLoginUrl()
   let { user, loading, error, isAuthenticated, logout } = useAuth();
 
+  // Get active seasonal banner based on current date
+  const activeBanner = getActiveBanner();
+
   return (
     <div className="flex flex-col gap-0">
-      {/* Christmas Banner */}
-      <div className="relative w-full bg-[#0B0F1A] border-b border-primary/20 overflow-hidden">
-        <div className="container mx-auto py-2 px-4">
-          <img 
-            src="/images/christmas-banner.png" 
-            alt="Feliz Natal - GetHubSystem" 
-            className="w-full h-auto max-h-[120px] md:max-h-[200px] object-contain animate-in fade-in slide-in-from-top-4 duration-1000"
-          />
-        </div>
-        {/* Subtle glow effect */}
-        <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-transparent pointer-events-none"></div>
-      </div>
+      {/* Seasonal Banner Modal - Automatically switches based on date */}
+      <BannerModal banner={activeBanner} />
+      
       {/* Hero Section */}
       <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-background pt-16 md:pt-0">
         {/* Background Video with Overlay */}

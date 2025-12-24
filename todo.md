@@ -67,3 +67,19 @@
 - [x] Gerar imagem de banner de Feliz Natal com Nano Banana (tema tech noir + natalino)
 - [x] Implementar banner de Natal na página inicial com animações
 - [x] Garantir responsividade do banner (desktop e mobile)
+
+
+## Em Andamento
+- [x] Criar componente BannerModal reutilizável com sistema de controle
+- [x] Implementar localStorage para não mostrar banner repetidamente
+- [x] Adicionar animações de entrada/saída suaves
+- [x] Remover banner estático e integrar modal na aplicação
+- [x] Criar sistema de configuração para trocar banners facilmente
+- [x] Gerar banner de Natal com robô IA (até 31/12)
+- [x] Gerar banner de Ano Novo 2025 (a partir de 01/01)
+- [ ] Gerar vídeo do robô acenando para banner animado (opcional)
+- [x] Gerar vídeo de fogos de artifício para banner de Ano Novo
+- [x] Implementar sistema de troca automática de banners por data
+- [x] Criar configuração de banners sazonais
+- [x] Atualizar BannerModal para suportar vídeos
+- [x] Integrar sistema automático na página Home
