@@ -85,3 +85,6 @@
 - [x] Criar configuração de banners sazonais
 - [x] Atualizar BannerModal para suportar vídeos
 - [x] Integrar sistema automático na página Home
+
+## Concluído Recentemente
+- [x] Corrigir datas dos banners para 2025 (Natal: dez/2025, Ano Novo: jan/2026)
