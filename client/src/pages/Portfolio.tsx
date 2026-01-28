@@ -5,7 +5,7 @@ export default function Portfolio() {
   const projects = [
     {
       name: "Contexto Contábil",
-      url: "contextocontabil.com.br",
+      url: "www.contextocontabil.com.br",
       category: "Site Institucional",
       description: "Site institucional moderno para escritório de contabilidade, focado em captação de leads e apresentação de serviços consultivos.",
       image: "/images/portfolio-contexto-contabil.webp"

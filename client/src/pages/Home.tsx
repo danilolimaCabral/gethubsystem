@@ -346,7 +346,7 @@ export default function Home() {
 
           <div className="grid md:grid-cols-3 gap-8 w-full">
             {[
-              { name: "Contexto Contábil", url: "contextocontabil.com.br", type: "Site Institucional" },
+              { name: "Contexto Contábil", url: "www.contextocontabil.com.br", type: "Site Institucional" },
               { name: "Panificadora Teixeira", url: "panificadorateixeira.com.br", type: "E-commerce Local" },
               { name: "Vitrine Global", url: "vitrine-global.com", type: "Marketplace" }
             ].map((item, i) => (
