@@ -348,7 +348,7 @@ export default function Home() {
             {[
               { name: "Contexto Contábil", url: "www.contextocontabil.com.br", type: "Site Institucional" },
               { name: "Panificadora Teixeira", url: "panificadorateixeira.com.br", type: "E-commerce Local" },
-              { name: "Vitrine Global", url: "vitrine-global.com", type: "Marketplace" }
+              { name: "Menu Turístico", url: "www.menuturistico.com.br", type: "Gastronomia & Turismo" }
             ].map((item, i) => (
               <div key={i} className="group relative overflow-hidden rounded-xl border border-border/50 bg-card hover:border-primary/50 transition-all duration-300">
                 <div className="aspect-video bg-muted flex items-center justify-center text-muted-foreground group-hover:bg-primary/5 transition-colors">

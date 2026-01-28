@@ -25,6 +25,13 @@ export default function Portfolio() {
       image: "/images/portfolio-vitrine-global.webp"
     },
     {
+      name: "Menu Turístico",
+      url: "www.menuturistico.com.br",
+      category: "Plataforma de Gastronomia e Turismo",
+      description: "Guia completo de restaurantes, eventos e turismo em Maringá e região, conectando estabelecimentos e visitantes.",
+      image: "/images/portfolio-menu-turistico.webp"
+    },
+    {
       name: "Dispara Linea Trading",
       url: "disparalineatrading.com",
       category: "E-commerce Internacional",
