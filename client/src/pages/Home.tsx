@@ -346,14 +346,17 @@ export default function Home() {
 
           <div className="grid md:grid-cols-3 gap-8 w-full">
             {[
-              { name: "Contexto Contábil", url: "www.contextocontabil.com.br", type: "Site Institucional" },
-              { name: "Panificadora Teixeira", url: "panificadorateixeira.com.br", type: "E-commerce Local" },
-              { name: "Menu Turístico", url: "menuturistico.com.br", type: "Gastronomia & Turismo" }
+              { name: "Contexto Contábil", url: "www.contextocontabil.com.br", type: "Site Institucional", image: "/images/portfolio-contexto-contabil.webp" },
+              { name: "Panificadora Teixeira", url: "panificadorateixeira.com.br", type: "E-commerce Local", image: "/images/portfolio-panificadora-teixeira.webp" },
+              { name: "Menu Turístico", url: "menuturistico.com.br", type: "Gastronomia & Turismo", image: "/images/portfolio-menu-turistico.webp" }
             ].map((item, i) => (
               <div key={i} className="group relative overflow-hidden rounded-xl border border-border/50 bg-card hover:border-primary/50 transition-all duration-300">
-                <div className="aspect-video bg-muted flex items-center justify-center text-muted-foreground group-hover:bg-primary/5 transition-colors">
-                  {/* Placeholder for portfolio screenshot */}
-                  <Globe className="h-12 w-12 opacity-20 group-hover:opacity-100 group-hover:text-primary transition-all duration-500 transform group-hover:scale-110" />
+                <div className="aspect-video bg-muted overflow-hidden">
+                  <img 
+                    src={item.image} 
+                    alt={item.name}
+                    className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300"
+                  />
                 </div>
                 <div className="p-6 text-left">
                   <p className="text-xs font-mono text-primary mb-2">{item.type}</p>

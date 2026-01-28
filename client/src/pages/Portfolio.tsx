@@ -15,7 +15,7 @@ export default function Portfolio() {
       url: "panificadorateixeira.com.br",
       category: "E-commerce Local",
       description: "Plataforma de encomendas online para panificadora tradicional, integrando pedidos diretamente com a produção.",
-      image: "/images/portfolio-panificadora.webp"
+      image: "/images/portfolio-panificadora-teixeira.webp"
     },
     {
       name: "Vitrine Global",
