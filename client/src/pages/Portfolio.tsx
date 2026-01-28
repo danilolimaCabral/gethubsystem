@@ -11,8 +11,8 @@ export default function Portfolio() {
       image: "/images/portfolio-contexto-contabil.webp"
     },
     {
-      name: "Panificadora Texeira",
-      url: "panificadoratexeira.com.br",
+      name: "Panificadora Teixeira",
+      url: "panificadorateixeira.com.br",
       category: "E-commerce Local",
       description: "Plataforma de encomendas online para panificadora tradicional, integrando pedidos diretamente com a produção.",
       image: "/images/portfolio-panificadora.webp"
