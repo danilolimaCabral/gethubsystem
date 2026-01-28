@@ -26,7 +26,7 @@ export default function Portfolio() {
     },
     {
       name: "Menu Turístico",
-      url: "www.menuturistico.com.br",
+      url: "menuturistico.com.br",
       category: "Plataforma de Gastronomia e Turismo",
       description: "Guia completo de restaurantes, eventos e turismo em Maringá e região, conectando estabelecimentos e visitantes.",
       image: "/images/portfolio-menu-turistico.webp"
@@ -37,13 +37,6 @@ export default function Portfolio() {
       category: "E-commerce Internacional",
       description: "Marketplace premium de tecnologia, pneus e perfumes com vendas B2B para Europa e Brasil.",
       image: "/images/portfolio-disparalinea.webp"
-    },
-    {
-      name: "Menu Turístico",
-      url: "menuturistic.com.br",
-      category: "Plataforma de Gastronomia e Turismo",
-      description: "Portal completo de gastronomia, turismo e eventos em Maringá e região, conectando estabelecimentos e visitantes.",
-      image: "/images/portfolio-menuturistic.webp"
     }
   ];
 
